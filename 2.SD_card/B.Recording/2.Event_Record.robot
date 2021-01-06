@@ -82,7 +82,6 @@ main_2nd照片文件大小
     布尔断言    ${flag}
 
 首先触发高优先级事件
-    [Tags]    AUTO
     Cmd    adb shell settings put global event_time_span 5/15
     ${sd}    SD卡挂载名称
     ${filelist1}    获取所有文件列表    ${sd}    sdcard
@@ -104,7 +103,6 @@ main_2nd照片文件大小
     大小断言    ${value}    0.95
 
 首先触发低优先级事件
-    [Tags]    AUTO
     Cmd    adb shell settings put global event_time_span 5/15
     ${sd}    SD卡挂载名称
     ${filelist1}    获取所有文件列表    ${sd}    sdcard

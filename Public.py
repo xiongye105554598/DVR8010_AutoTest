@@ -686,17 +686,17 @@ def Check(time, file, flag):
             mp4_path = os.path.join(file_path, each)
             file_byte = os.path.getsize(mp4_path)
             file_M = int(file_byte / 1024)
-            if 100 <= file_M <= 200:
-                print("当前照片 %s 大小满足100-200KB：%sKB" % (each, file_M))
+            if 100 <= file_M <= 500:
+                print("当前照片 %s 大小满足100-500KB：%sKB" % (each, file_M))
                 os.remove(mp4_path)
             else:
-                print("当前照片 %s 大小满足100-200KB：%sKB" % (each, file_M))
+                print("当前照片 %s 大小满足100-500KB：%sKB" % (each, file_M))
                 flag += 1
         if flag == 0:
-            print("照片大小满足100-200KB要求！")
+            print("照片大小满足100-500KB要求！")
             return True
         else:
-            print("照片大小不满足100-200KB要求,不满足个数：" + str(flag) + "/" + str(len(file)))
+            print("照片大小不满足100-500KB要求,不满足个数：" + str(flag) + "/" + str(len(file)))
             return False
 
     elif flag == '1min_file':                #检查设备录制的normal视频是否为1min
@@ -1172,3 +1172,4 @@ def Check(time, file, flag):
 
     else:
         return False
+

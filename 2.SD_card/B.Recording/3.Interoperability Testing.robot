@@ -98,7 +98,7 @@ Resource          ../L2层关键字.robot
 事件录影不会被警告信息中断
     [Tags]    AUTO
     返回录制页面
-    Cmd    adb shell settings put global event_time_span 5/15
+    Cmd    adb shell settings put global RECSET_event_time_span 5/15
     sleep    1
     ${sd}    SD卡挂载名称
     触发中碰撞

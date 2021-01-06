@@ -144,8 +144,8 @@ SD卡挂载名称
     [Return]    ${copyfile}
 
 还原
-    Cmd    adb shell settings put global event_time_span 10/5
-    Cmd    adb shell settings put global event_pics 0,5,10,15
+    Cmd    adb shell settings put global RECSET_event_time_span 10/5
+    Cmd    adb shell settings put global RECSET_event_pics 0,5,10,15
 
 手动触发碰撞
     Cmd    adb shell input tap 290 205
